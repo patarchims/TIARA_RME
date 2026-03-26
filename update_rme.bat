@@ -4,7 +4,7 @@ title Update Aplikasi RME RS TIARA KASIH PEMATANGSIANTAR
 cls
 
 set file_url=http://192.168.0.1:8181/app/images/files/TIARA_RME.zip
-set download_path=D:\HIS\TIARA_RME-master.zip
+set download_path=D:\HIS\TIARA_RME-main.zip
 set temp_extract=D:\HIS\update_temp
 set app_folder=D:\HIS\TIARA_RME
 set app_name=tiara_app.exe
@@ -16,14 +16,14 @@ echo =========================================
 echo.
 echo Aplikasi sedang diperbarui.
 echo Mohon jangan menutup jendela ini.
-echo
+echo.
 echo.
 echo [1/5] Mengunduh file pembaruan...
 curl -L "%file_url%" -o "%download_path%" --progress-bar
 echo Unduhan selesai.
 echo.
 
-echo [2/5] Menutup aplikasi RME HARAPAN PEMATANGSIANTAR...
+echo [2/5] Menutup aplikasi RME TIARA KASIH PEMATANGSIANTAR...
 taskkill /IM "%app_name%" /F >nul 2>&1
 timeout /t 2 >nul
 echo Aplikasi berhasil ditutup.
@@ -41,7 +41,7 @@ echo.
 
 echo [4/5] Memperbarui file aplikasi...
 
-xcopy "%temp_extract%\TIARA_RME-master\*" "%app_folder%\" /E /Y /Q
+xcopy "%temp_extract%\TIARA_RME-main\*" "%app_folder%\" /E /Y /Q
 
 echo File aplikasi berhasil diperbarui.
 echo.
